@@ -11,6 +11,25 @@
     overflow-y: auto;
 }
 
+@media (max-width: 700px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        min-height: 70vh;
+        height: auto;
+        padding: 24px 16px 32px;
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    .checkoutAction {
+        margin-right: -16px;
+        margin-left: -16px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
 @media (max-width: 360px) {
     .sidebar {
         padding: 16px;
