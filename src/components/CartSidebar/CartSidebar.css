@@ -2,13 +2,19 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 320px;
+    width: min(320px, 100vw);
     height: 100vh;
     background: white;
     padding: 20px;
     box-shadow: -3px 0 10px rgba(0,0,0,0.2);
     z-index: 1000;
     overflow-y: auto;
+}
+
+@media (max-width: 360px) {
+    .sidebar {
+        padding: 16px;
+    }
 }
 .closeBtn{
     background: transparent;

@@ -22,3 +22,10 @@
 .favoriteCard img { width: 58px; height: 58px; border-radius: 7px; object-fit: cover; }
 .favoriteCard div { display: grid; gap: 5px; min-width: 0; }.favoriteCard strong { overflow: hidden; text-overflow: ellipsis; text-transform: capitalize; white-space: nowrap; }.favoriteCard span { color: #c44721; font-size: 13px; font-weight: 700; }
 @media (max-width: 600px) { .profileTopline { flex-direction: column; }.profileStats { gap: 8px; }.profileStats div { padding: 13px 10px; }.trackingSteps { gap: 2px; }.trackingStep small { font-size: 9px; } }
+
+@media (max-width: 420px) {
+	.profilePage { padding-right: 14px; padding-left: 14px; }
+	.profileStats { grid-template-columns: 1fr; }
+	.orderCardHeader { flex-direction: column; }
+	.sectionHeading { align-items: flex-start; flex-direction: column; }
+}

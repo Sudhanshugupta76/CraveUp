@@ -80,15 +80,20 @@ span{
         transform: translateY(-10px);
     }
 }
-@media(max-width:768px){
+@media(max-width:900px){
     nav{
         flex-direction: column;
         gap: 15px;
+        padding: 14px 16px;
     }
     .listItems{
-        gap: 20px;
+        width: 100%;
+        gap: 12px 18px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    .listItems li a{
+        font-size: 16px;
     }
     .logo{
         font-size: 24px;

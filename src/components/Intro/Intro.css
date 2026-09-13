@@ -53,6 +53,17 @@
   animation: contentLift 900ms 120ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+@media (max-width: 420px) {
+  .introContent {
+    width: min(100%, 320px);
+    padding: 0 16px;
+  }
+
+  .intro h1 {
+    font-size: clamp(3.2rem, 18vw, 4.2rem);
+  }
+}
+
 .introIconWrap {
   position: relative;
   display: grid;

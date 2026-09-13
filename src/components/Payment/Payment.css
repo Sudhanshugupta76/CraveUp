@@ -290,7 +290,12 @@
   font-weight: 800;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
+  .paymentPage {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
   .paymentLayout {
     grid-template-columns: 1fr;
   }
@@ -301,6 +306,12 @@
 }
 
 @media (max-width: 440px) {
+  .paymentHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .paymentMethods {
     grid-template-columns: repeat(2, 1fr);
   }

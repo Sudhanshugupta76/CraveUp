@@ -39,3 +39,14 @@
     padding-top: 15px;
     color: #aaa;
 }
+
+@media (max-width: 700px){
+    .footer-container{
+        gap: 24px;
+    }
+
+    .footer-section{
+        min-width: 0;
+        flex-basis: 100%;
+    }
+}

@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 400px;
+    width: min(400px, calc(100% - 32px));
     padding: 14px 20px;
     background-color: #fff;
     border: 2px solid #ff6b00;
@@ -61,12 +61,27 @@
 .categoryFilters button.active { border-color: #ff6b00; background: #ff6b00; color: #fff; }
 .catalogOptions select { border-radius: 7px; outline: none; }
 .vegToggle { display: flex; align-items: center; gap: 6px; color: #33752d; font-size: 13px; font-weight: 600; }
-@media(max-width:768px){
+@media(max-width:900px){
     .searchBar{
-        width:90%
+        width: min(400px, calc(100% - 32px));
     }
     .searchBar input{
         font-size: 14px;
     }
     .catalogControls { align-items: stretch; flex-direction: column; }
+}
+
+@media(max-width:480px){
+    .search{
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    .catalogControls{
+        padding: 0 12px;
+    }
+
+    .catalogOptions{
+        justify-content: space-between;
+    }
 }

@@ -7,3 +7,14 @@
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
+
+html,
+body,
+#root {
+    width: 100%;
+    min-width: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
