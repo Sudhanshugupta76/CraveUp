@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import QRCode from "react-qr-code";
 import { apiFetch } from "../../lib/api";
+import { getCardNetwork } from "../../lib/cardNetwork";
 import "./Payment.css";
 
 const paymentMethods = [
@@ -206,6 +207,11 @@ const Payment = ({ cart = [], setCart, user, setOrders, notify }) => {
           {(paymentMethod === "card" || paymentMethod === "debit") && (
             <div className="paymentOptionBody paymentForm">
               <input className="paymentInput" type="text" inputMode="numeric" maxLength={19} placeholder={`${paymentMethod === "card" ? "Credit" : "Debit"} card number`} value={cardNumber} onChange={(event) => setCardNumber(event.target.value.replace(/[^\d\s]/g, ""))} />
+              {cardNumber.replace(/\D/g, "").length >= 4 && (
+                <span className="cardNetwork" aria-live="polite">
+                  {getCardNetwork(cardNumber)}
+                </span>
+              )}
               <div className="paymentInputRow">
                 <input className="paymentInput" type="text" placeholder="MM/YY" aria-label="Card expiry" maxLength={5} value={cardExpiry} onChange={(event) => setCardExpiry(event.target.value.replace(/[^\d/]/g, ""))} />
                 <input className="paymentInput" type="password" placeholder="CVV" aria-label="Card CVV" maxLength={4} value={cardCvv} onChange={(event) => setCardCvv(event.target.value.replace(/\D/g, ""))} />

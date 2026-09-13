@@ -179,6 +179,13 @@
   gap: 10px;
 }
 
+.cardNetwork {
+  margin-top: -4px;
+  color: #218739;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .paymentInputRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
