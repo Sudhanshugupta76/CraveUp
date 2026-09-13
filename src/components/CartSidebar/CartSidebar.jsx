@@ -281,32 +281,34 @@ const CartSidebar = ({ cart = [], setCart }) => {
             {freeDeliveryPass && <div className="discountLine"><span>1-month free delivery pass</span><span>&#8377; {passFee}</span></div>}
             <h3 className="total"><span>Total</span><span>&#8377; {finalTotal}</span></h3>
           </div>
-          {deliveryAddress ? (
-            <Link
-              to="/payment"
-              state={{
-                address: deliveryAddress,
-                pricing: {
-                  subtotal: total,
-                  offerDiscount,
-                  couponDiscount,
-                  discountedSubtotal,
-                  gst,
-                  packagingFee,
-                  deliveryFee,
-                  passFee,
-                  finalTotal,
-                },
-              }}
-              className="orderBtn continuePayment"
-            >
-              Continue to payment
-            </Link>
-          ) : (
-            <button type="button" className="orderBtn" disabled>
-              Continue to payment
-            </button>
-          )}
+          <div className="checkoutAction">
+            {deliveryAddress ? (
+              <Link
+                to="/payment"
+                state={{
+                  address: deliveryAddress,
+                  pricing: {
+                    subtotal: total,
+                    offerDiscount,
+                    couponDiscount,
+                    discountedSubtotal,
+                    gst,
+                    packagingFee,
+                    deliveryFee,
+                    passFee,
+                    finalTotal,
+                  },
+                }}
+                className="orderBtn continuePayment"
+              >
+                Continue to payment
+              </Link>
+            ) : (
+              <Link to="/location" className="orderBtn continuePayment">
+                Select address to continue
+              </Link>
+            )}
+          </div>
           {showQr && (
             <div className="qrBox">
               <h2>Choose payment method</h2>
