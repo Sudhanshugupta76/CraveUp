@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import QRCode from "react-qr-code";
 import { apiFetch } from "../../lib/api";
 import { getCardNetwork } from "../../lib/cardNetwork";
+import { createUpiPaymentUrl } from "../../lib/paymentConfig";
 import "./Payment.css";
 
 const paymentMethods = [
@@ -48,7 +49,7 @@ const Payment = ({ cart = [], setCart, user, setOrders, notify }) => {
   const deliveryFee = pricing?.deliveryFee ?? 40;
   const passFee = pricing?.passFee ?? 0;
   const finalTotal = pricing?.finalTotal ?? discountedSubtotal + gst + packagingFee + deliveryFee + passFee;
-  const paymentUrl = `upi://pay?pa=sudhanshugupta527-5@oksbi&pn=CraveUp&am=${finalTotal}&cu=INR`;
+  const paymentUrl = createUpiPaymentUrl(finalTotal);
 
   const placeOrder = async (paymentId) => {
     const orderData = await apiFetch("/api/orders", {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./CartSidebar.css";
 import QRCode from "react-qr-code";
 import { getCardNetwork } from "../../lib/cardNetwork";
+import { createUpiPaymentUrl } from "../../lib/paymentConfig";
 
 const creditCardOffers = [
   { bank: "HDFC Bank", rate: 18 },
@@ -74,7 +75,7 @@ const CartSidebar = ({ cart = [], setCart }) => {
   const deliveryFee = freeDeliveryPass ? 0 : 40;
   const passFee = freeDeliveryPass ? 1 : 0;
   const finalTotal = discountedSubtotal + gst + packagingFee + deliveryFee + passFee;
-  const paymentUrl = `upi://pay?pa=sudhanshugupta527-5@oksbi&pn=CraveUp&am=${finalTotal}&cu=INR`;
+  const paymentUrl = createUpiPaymentUrl(finalTotal);
 
   const placeOrder = () => {
     setCart([]);
