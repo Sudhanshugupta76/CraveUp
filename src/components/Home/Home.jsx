@@ -15,7 +15,7 @@ import khichdi from "../../assets/khichdi.webp";
 import manchuriyan from "../../assets/manchuriyan.webp";
 import momos from "../../assets/momos.webp";
 import panipuri from "../../assets/panipuri.webp";
-import poha from "../../assets/poha.webp";
+import poha from "../../assets/Poha.webp";
 import rasmalai from "../../assets/rasmalai.webp";
 import roll from "../../assets/Roll.webp";
 import samosa from "../../assets/samosa.webp";
