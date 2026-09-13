@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "bfee3f9f-618a-480a-ba76-261c0efbd6cd",
+      "name": "Himanshu",
+      "email": "himanshugupta527@gmail.com",
+      "passwordHash": "$2b$12$kMyE/28VT66HjyZ4hdUydOP0/31xF4T1k8XK3QdLQztVsgWungh4O",
+      "createdAt": "2026-09-13T09:36:58.163Z"
+    }
+  ],
+  "orders": []
+}

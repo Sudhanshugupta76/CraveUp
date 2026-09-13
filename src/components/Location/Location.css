@@ -1,0 +1,131 @@
+.location-page {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 56px 20px;
+  background: linear-gradient(135deg, #fff8ee, #ffe1c3);
+}
+
+.location-card {
+  width: min(100%, 560px);
+  padding: 40px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 16px 35px rgba(101, 55, 20, 0.14);
+}
+
+.location-heading {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.location-eyebrow {
+  color: #e95524;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.location-heading h1 {
+  margin: 10px 0;
+  color: #2b170b;
+  font-size: 30px;
+}
+
+.location-heading p,
+.location-message,
+.saved-address {
+  color: #74685f;
+  line-height: 1.5;
+}
+
+.detect-button,
+.save-button,
+.map-button {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.detect-button,
+.save-button {
+  background: #ff6b35;
+  color: #ffffff;
+}
+
+.detect-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.location-form {
+  display: grid;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.location-form label {
+  color: #3a2418;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.location-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e0d1c5;
+  border-radius: 8px;
+  outline: none;
+  color: #2b170b;
+  font: inherit;
+  resize: vertical;
+}
+
+.location-form textarea:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.save-button {
+  margin-top: 5px;
+}
+
+.map-button {
+  margin-top: 12px;
+  border: 1px solid #ff6b35;
+  background: #fff8ee;
+  color: #e95524;
+}
+
+.location-message,
+.saved-address {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.saved-address {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f1faef;
+  color: #287a32;
+  font-size: 14px;
+}
+
+@media (max-width: 520px) {
+  .location-page {
+    padding: 35px 16px;
+  }
+
+  .location-card {
+    padding: 28px 20px;
+  }
+
+  .location-heading h1 {
+    font-size: 26px;
+  }
+}

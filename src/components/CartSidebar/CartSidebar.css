@@ -1,0 +1,541 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow-y: auto;
+}
+.closeBtn{
+    background: transparent;
+    color: crimson;
+    border: none;
+    padding: 2px 6px;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    text-decoration: none;
+}
+.cartItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.cartItem img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.cartDetails{
+    flex: 1;
+}
+.cartDetails h3{
+    margin: 0 0 5px;
+    color: #2b170b;
+    text-transform: capitalize;
+}
+.cartDetails p,
+.emptyCart{
+    margin: 0;
+    color: #666;
+}
+.orderSuccess{
+    padding: 25px 10px;
+    text-align: center;
+}
+.orderSuccess h3{
+    margin-bottom: 10px;
+    color: #218739;
+}
+.orderSuccess p{
+    margin-bottom: 20px;
+    color: #666;
+}
+.continueBtn{
+    display: block;
+    padding: 11px;
+    border-radius: 5px;
+    background: #ff6b35;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.qtyControls{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+.qtyControls button{
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    background: #ff6b35;
+    color: white;
+    cursor: pointer;
+}
+.removeBtn{
+    display: block;
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-left: auto;
+}
+.total{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.deliveryAddress{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #ead8c9;
+    border-radius: 8px;
+    background: #fff8ee;
+}
+.deliveryAddress h3{
+    margin-bottom: 5px;
+    color: #2b170b;
+    font-size: 15px;
+}
+.deliveryAddress p{
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.addressWarning{
+    color: #c44721 !important;
+}
+.changeAddress{
+    align-self: center;
+    color: #e95524;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.offerSection{
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #ead8c9;
+}
+.offerHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+.offerHeading h3{
+    margin: 0;
+    color: #2b170b;
+    font-size: 16px;
+}
+.offerHeading p{
+    margin: 4px 0 12px;
+    color: #777;
+    font-size: 12px;
+}
+.offerBadge{
+    padding: 4px 7px;
+    border-radius: 4px;
+    background: #fff0d9;
+    color: #bb531d;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.offerList{
+    display: grid;
+    gap: 8px;
+}
+.offerCard,
+.couponBtn{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ead8c9;
+    border-radius: 7px;
+    background: #fff;
+    color: #2b170b;
+    text-align: left;
+}
+.offerCard{
+    cursor: pointer;
+}
+.offerCard.selected,
+.couponBtn.applied{
+    border-color: #ff6b35;
+    background: #fff8ee;
+}
+.offerCard input{
+    accent-color: #ff6b35;
+}
+.offerIcon,
+.couponIcon{
+    display: grid;
+    place-items: center;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #ffeadc;
+    color: #d95120;
+    font-size: 13px;
+    font-weight: 800;
+}
+.cardIcon{
+    font-size: 9px;
+}
+.offerCopy,
+.couponBtn > span:nth-child(2){
+    display: grid;
+    min-width: 0;
+    flex: 1;
+    gap: 2px;
+}
+.offerCopy strong,
+.couponBtn strong{
+    font-size: 12px;
+}
+.offerCopy small,
+.couponBtn small{
+    color: #777;
+    font-size: 10px;
+}
+.offerSave{
+    color: #218739;
+    font-size: 11px;
+    font-weight: 800;
+}
+.bankDetails{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0 8px 2px 38px;
+}
+.bankDetails span{
+    padding: 4px 7px;
+    border: 1px solid #f0d7c4;
+    border-radius: 4px;
+    color: #8c4a2a;
+    font-size: 10px;
+    font-weight: 700;
+}
+.creditCardDetails{
+    display: grid;
+    gap: 5px;
+    margin: -1px 0 2px 38px;
+    padding: 8px;
+    border-left: 2px solid #ffb08c;
+    background: #fff8ee;
+}
+.creditCardRow{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 4px 5px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #6e5140;
+    font-size: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.creditCardRow.selected{
+    border-color: #f0c7ae;
+    border-radius: 4px;
+    background: #fff;
+}
+.creditCardRow strong{
+    color: #218739;
+    white-space: nowrap;
+}
+.couponBtn{
+    margin-top: 9px;
+    cursor: pointer;
+}
+.couponBtn.applied .couponIcon{
+    background: #dff2e2;
+    color: #218739;
+}
+.couponAction{
+    color: #e95524;
+    font-size: 11px;
+    font-weight: 700;
+}
+.priceSummary{
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #ead8c9;
+    color: #666;
+    font-size: 13px;
+}
+.deliveryPass{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 11px;
+    border: 1px solid #c8e2ce;
+    border-radius: 7px;
+    background: #f2fbf3;
+}
+.deliveryPass div{
+    display: grid;
+    gap: 3px;
+}
+.deliveryPass strong{
+    color: #216b31;
+    font-size: 12px;
+}
+.deliveryPass small{
+    color: #5d7162;
+    font-size: 10px;
+    line-height: 1.35;
+}
+.passToggle{
+    flex: 0 0 auto;
+    padding: 7px 9px;
+    border: 1px solid #218739;
+    border-radius: 5px;
+    background: white;
+    color: #218739;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.passToggle.active{
+    background: #218739;
+    color: white;
+}
+.priceSummary > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+.priceSummary .discountLine{
+    color: #218739;
+}
+.priceSummary .total{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 0;
+    color: #2b170b;
+}
+
+.orderBtn{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: navy;
+    color: white;
+    border: none;font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.orderBtn:hover{
+    background-color: darkblue;
+
+}
+.continuePayment{
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+.orderBtn:disabled{
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.qrBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 18px 10px;
+    border: 1px solid #ead8c9;
+    border-radius: 8px;
+    background: #fff8ee;
+    text-align: center;
+}
+.qrBox h2,
+.qrBox h3,
+.qrBox p{
+    margin: 0;
+}
+.qrBox h2{
+    color: #2b170b;
+    font-size: 18px;
+}
+.qrBox h3{
+    color: #218739;
+    font-size: 16px;
+}
+.qrBox p{
+    color: #666;
+    font-size: 12px;
+}
+.paymentMethods{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+.paymentMethod{
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    min-height: 52px;
+    padding: 6px 3px;
+    border: 1px solid #ead8c9;
+    border-radius: 5px;
+    background: white;
+    color: #6e5140;
+    font-size: 9px;
+    cursor: pointer;
+}
+.paymentMethod span{
+    color: #d95120;
+    font-size: 10px;
+    font-weight: 800;
+}
+.paymentMethod.selected,
+.upiApps button.selected{
+    border-color: #ff6b35;
+    background: #fff0e6;
+    color: #c44721;
+}
+.scannerBtn{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff6b35;
+    border-radius: 6px;
+    background: #fff0e6;
+    color: #c44721;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+.scannerBtn:hover{
+    background: #ffe1d1;
+}
+.scannerPanel{
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 8px;
+    border: 1px dashed #ffb08c;
+    border-radius: 7px;
+    background: white;
+}
+.scannerPanel h3{
+    margin: 0;
+}
+.scannerPanel p{
+    max-width: 220px;
+    line-height: 1.4;
+}
+.upiApps{
+    width: 100%;
+}
+.upiApps p{
+    margin-bottom: 6px;
+}
+.upiApps > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+.upiApps button{
+    padding: 5px 7px;
+    border: 1px solid #ead8c9;
+    border-radius: 4px;
+    background: white;
+    color: #6e5140;
+    font-size: 10px;
+    cursor: pointer;
+}
+.paymentForm{
+    display: grid;
+    gap: 8px;
+    width: 100%;
+}
+.cardOtpBox{
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+    border: 1px solid #ffb08c;
+    border-radius: 6px;
+    background: #fff8ee;
+    text-align: left;
+}
+.cardOtpBox label{
+    color: #6e5140;
+    font-size: 12px;
+    font-weight: 700;
+}
+.cardOtpBox p,
+.paymentMessage{
+    margin: 0;
+    color: #b44828;
+    font-size: 11px;
+    line-height: 1.4;
+}
+.paymentMessage{
+    text-align: center;
+}
+.cardNumberField{
+    display: grid;
+    gap: 5px;
+}
+.cardBrand{
+    color: #218739;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+.paymentInputRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.paymentInput{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ead8c9;
+    border-radius: 5px;
+    background: white;
+    color: #2b170b;
+    font-size: 12px;
+}
+.paymentInput:focus{
+    outline: 2px solid #ffb08c;
+    border-color: #ff6b35;
+}
+.qrBox .orderBtn{
+    margin-top: 4px;
+}

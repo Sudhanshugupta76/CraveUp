@@ -1,0 +1,24 @@
+.profilePage { min-height: 72vh; padding: 42px clamp(18px, 6vw, 90px) 70px; background: #fff8ee; color: #2b170b; }
+.profileTopline, .profileSection, .profileStats { max-width: 1050px; margin: 0 auto; }
+.profileTopline { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.profileEyebrow { color: #e95524; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.profileTopline h1 { margin: 7px 0 4px; font-size: clamp(28px, 5vw, 46px); }
+.profileTopline p, .profileEmpty p, .profileMuted { color: #74685f; }
+.logoutButton, .profileAction { border: 0; border-radius: 7px; padding: 11px 16px; background: #ff6b35; color: white; cursor: pointer; font: inherit; font-weight: 700; text-decoration: none; }
+.profileStats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 30px; }
+.profileStats div { display: grid; gap: 4px; padding: 18px; border: 1px solid #ead8c9; border-radius: 10px; background: white; }
+.profileStatLink { display: grid; gap: 4px; padding: 18px; border: 1px solid #ead8c9; border-radius: 10px; background: white; color: inherit; text-decoration: none; }
+.profileStatLink:hover { border-color: #ff6b35; }
+.profileStats strong { font-size: 25px; } .profileStats span { color: #74685f; font-size: 12px; }
+.profileSection { margin-top: 34px; } .sectionHeading { display: flex; justify-content: space-between; align-items: end; gap: 15px; }
+.sectionHeading h2 { margin: 6px 0 0; font-size: 23px; } .profileTextLink { color: #c44721; font-weight: 700; text-decoration: none; font-size: 13px; }
+.orderList { display: grid; gap: 14px; margin-top: 16px; }.orderCard, .profileEmpty { padding: 20px; border: 1px solid #ead8c9; border-radius: 10px; background: white; box-shadow: 0 8px 20px rgba(101, 55, 20, .07); }
+.orderCardHeader { display: flex; justify-content: space-between; gap: 14px; }.orderCardHeader div { display: grid; gap: 4px; }.orderCardHeader span, .orderItems, .orderStatus { color: #74685f; font-size: 12px; }.orderItems { line-height: 1.5; }
+.trackingSteps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 20px 0 12px; }.trackingStep { display: grid; justify-items: center; gap: 6px; color: #bca99d; text-align: center; }.trackingStep span { display: grid; width: 25px; height: 25px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; }.trackingStep small { font-size: 10px; }.trackingStep.done { color: #218739; }.orderStatus { margin: 0; color: #218739; font-weight: 700; }
+.orderStatus.cancelled { color: #c44721; }.cancelOrderButton { margin-top: 12px; border: 1px solid #e7b9a5; border-radius: 6px; padding: 7px 10px; background: #fff8ee; color: #b33d1d; cursor: pointer; font: inherit; font-size: 12px; font-weight: 700; }
+.profileEmpty { max-width: 520px; margin: 60px auto; text-align: center; }.profileEmpty h1 { margin-top: 0; }.profileAction { display: inline-block; margin-top: 12px; }
+.favoriteGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; margin-top: 16px; }
+.favoriteCard { display: flex; align-items: center; gap: 12px; padding: 10px; border: 1px solid #ead8c9; border-radius: 9px; background: #fff; }
+.favoriteCard img { width: 58px; height: 58px; border-radius: 7px; object-fit: cover; }
+.favoriteCard div { display: grid; gap: 5px; min-width: 0; }.favoriteCard strong { overflow: hidden; text-overflow: ellipsis; text-transform: capitalize; white-space: nowrap; }.favoriteCard span { color: #c44721; font-size: 13px; font-weight: 700; }
+@media (max-width: 600px) { .profileTopline { flex-direction: column; }.profileStats { gap: 8px; }.profileStats div { padding: 13px 10px; }.trackingSteps { gap: 2px; }.trackingStep small { font-size: 9px; } }
