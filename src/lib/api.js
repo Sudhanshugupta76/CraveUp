@@ -1,4 +1,5 @@
 const getToken = () => localStorage.getItem("craveUpToken");
+const apiBaseUrl = import.meta.env.VITE_API_URL || "";
 
 export const apiFetch = async (url, options = {}) => {
   const headers = new Headers(options.headers || {});
@@ -8,7 +9,7 @@ export const apiFetch = async (url, options = {}) => {
 
   let response;
   try {
-    response = await fetch(url, { ...options, headers });
+    response = await fetch(`${apiBaseUrl}${url}`, { ...options, headers });
   } catch {
     throw new Error("Server se connection nahi ho raha. Please 'npm run server' start karein.");
   }
